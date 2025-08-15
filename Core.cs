@@ -25,7 +25,7 @@ namespace LEAntifog
         {
             if (fogComponent == null)
             {
-                fogComponent = Object.FindFirstObjectByType(typeof(MinimapFogOfWar)) as MinimapFogOfWar;
+                fogComponent = Object.FindFirstObjectByType<MinimapFogOfWar>();
                 if (fogComponent != null)
                 {
                     fogComponent.discoveryDistance = 999f;
