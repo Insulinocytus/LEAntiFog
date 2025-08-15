@@ -8,10 +8,10 @@ Tested in MelonLoader v0.7.1 Open-Beta + game version 1.2.7.0.
 
 ## How to install
 
-- Download `LEAntiFog.dll`
+- Download `LEAntifog.dll`
 - Install [MelonLoader](https://github.com/LavaGang/MelonLoader)
 - At least start the game once (let MelonLoader create `Mods` folder)
-- Move `LEAntiFog.dll` into `Mods` folder
+- Move `LEAntifog.dll` into `Mods` folder
 
 ## How to build
 
