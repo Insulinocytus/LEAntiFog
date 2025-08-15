@@ -19,4 +19,4 @@ Tested in MelonLoader v0.7.1 Open-Beta + game version 1.2.7.0.
 - At least start the game once (let MelonLoader create `MelonLoader` folder)
 - Clone this repo
 - Copy `/path/to/game/MelonLoader` to this repo
-- Run `dotnet restore` then `dotnet build`
+- Run `dotnet restore` then `dotnet build`(or `dotnet build --configuration Release`)
