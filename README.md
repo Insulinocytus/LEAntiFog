@@ -1,9 +1,9 @@
 # Last Epoch Anti-fog
 
 A mod that removes the fog of war from the game map.  
-As is well known, the game uses a circular collision detection area centered on the player to reveal areas through the fog of war. This mod simply expands the range of this circle to a much larger value each time a scene is loaded.  
-  
-Tested with MelonLoader v0.7.1 Open-Beta + game version 1.2.7.0.
+The mod sets the minimap's reveal radius to 999 when each minimap is initialized, so a newly loaded area is revealed.
+
+Built against MelonLoader v0.7.3 Open-Beta and Last Epoch 1.4.7. In-game behavior has not yet been verified.
 
 ## How to install
 

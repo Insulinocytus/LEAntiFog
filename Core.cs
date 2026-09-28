@@ -1,44 +1,26 @@
-﻿using Il2Cpp;
-using MelonLoader;
-using Object = UnityEngine.Object;
+﻿using MelonLoader;
+using HarmonyLib;
+using Il2CppLE.UI.Minimap;
 
-[assembly: MelonInfo(typeof(LEAntifog.Core), "LEAntifog", "1.0.0", "Insulinocytus", null)]
+[assembly: MelonInfo(typeof(LEAntifog.Core), "LEAntifog", "1.1.0", "Insulinocytus", null)]
 [assembly: MelonGame("Eleventh Hour Games", "Last Epoch")]
 
 namespace LEAntifog
 {
     public class Core : MelonMod
     {
-        MinimapFogOfWar fogComponent;
-
         public override void OnInitializeMelon()
         {
-            LoggerInstance.Msg($"{nameof(LEAntifog)} initialized.");
+            HarmonyInstance.PatchAll();
         }
+    }
 
-        public override void OnSceneWasInitialized(int buildIndex, string sceneName)
+    [HarmonyPatch(typeof(Minimap), nameof(Minimap.Awake))]
+    internal static class MinimapPatch
+    {
+        private static void Postfix(Minimap __instance)
         {
-            OverrideDiscoveryDistance();
-        }
-
-        void OverrideDiscoveryDistance()
-        {
-            if (fogComponent == null)
-            {
-                fogComponent = Object.FindFirstObjectByType<MinimapFogOfWar>();
-                if (fogComponent != null)
-                {
-                    fogComponent.discoveryDistance = 999f;
-                    return;
-                }
-
-                LoggerInstance.Error(
-                    $"{nameof(MinimapFogOfWar)} component not found. Maybe this game version is not supported anymore. Please report it to the developer.");
-            }
-            else
-            {
-                fogComponent.discoveryDistance = 999f;
-            }
+            __instance.RevealRadius = 999f;
         }
     }
 }
