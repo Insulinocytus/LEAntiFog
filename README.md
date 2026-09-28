@@ -5,6 +5,8 @@ The mod sets the minimap's reveal radius to 999 when each minimap is initialized
 
 Tested in game with MelonLoader v0.7.3 Open-Beta and Last Epoch 1.4.7.
 
+Season 4 support is based on [@15009199's patch](https://github.com/15009199/LEAntiFog/commit/ada3060efd333da56c6a1f9d8f1990272c4d2209), with a few small changes.
+
 ## How to install
 
 - Download `LEAntifog.dll`
