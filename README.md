@@ -3,7 +3,7 @@
 A mod that removes the fog of war from the game map.  
 The mod sets the minimap's reveal radius to 999 when each minimap is initialized, so a newly loaded area is revealed.
 
-Built against MelonLoader v0.7.3 Open-Beta and Last Epoch 1.4.7. In-game behavior has not yet been verified.
+Tested in game with MelonLoader v0.7.3 Open-Beta and Last Epoch 1.4.7.
 
 ## How to install
 
